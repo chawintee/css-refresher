@@ -170,3 +170,49 @@ CSS Validator
 - [WebAim](https://webaim.org/)
 ---
 ## Lesson 4 : Units & Sizes
+- [(MDN) Absolute length units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages)
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1 {
+    border: 2px dashed red;
+    width: 50%;
+    font-size: 3rem;
+    padding: 0.5em;
+}
+
+main {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 2rem;
+    width: 40ch;
+}
+```
+- font-size default 16px
+- absolute value
+    - pixel
+- relative value
+    - relative to the parent
+    - percent(%)
+    - rem (root emphasize) - Font size of the root element. 
+        - root element defind by browser.
+    - em (emphasize) - Font size of the parent, in the case of typographical properties like font-size, and font size of the element itself, in the case of other properties like width.
+    - ch (charector) - The advance measure (width) of the glyph "0" of the element's font. (charector before the line wrap)
+    - vw (viewport's width) - 1% of the viewport's width. `(like use percent(%))` `use percent(%) instant`
+    - vh (viewport's height) - 1% of the viewport's height.
+
+- font-size - use `rem`
+- padding or margin - use `em`
+---
+## Lesson 5 : Box Model
