@@ -310,6 +310,114 @@ p {
     ```
 ---
 ## Lesson 6 : Typography
+- Typography is the way that text is arranged and presented.
+> [(MDN) text-menu](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+- Text-decoration
+    ```css
+        p {
+            text-decoration: underline;
+            text-decoration: overline;
+            text-decoration: line-through;
+            text-decoration: none;
+        }   
+    ```
+    - default is none
+- Text-transform
+    ```css
+        p {
+            text-transform: capitalize;
+            text-transform: lowercase;
+            text-transform: uppercase;
+        }   
+    ```
+- Text-align
+    ```css
+        p {
+            text-align: left;
+            text-align: justify;
+            text-align: right;
+        }   
+    ```
+    - default is left
+- Text-indent
+    ```css
+        p {
+            text-indent: 2em;
+        }   
+    ```
+    - indent in first line.
+- Line-height
+    ```css
+        p {
+            line-height: 1.5;
+        }   
+    ```
+- Letter-spacing
+    ```css
+        p {
+            letter-spacing: 0.25em;
+        }   
+    ```
+- Word-spacing
+    ```css
+        p {
+            word-spacing: 0.5em;
+        }   
+    ```
+- Font-weight
+    ```css
+        p {
+            font-weight: 100;
+            font-weight: bolder;
+        }   
+    ```
+    - default is 300 - 400
+- Font-style
+    ```css
+        p {
+            font-style: italic;
+            font-style: oblique;
+        }   
+    ```
+    - default is normal
+- Font-family
+    ```css
+        p {
+            font-family: sans-serif;
+            font-family: monospace;
+            font-family: cursive;
+            font-family: fantasy;
+            font-family: first choice, second choice, third choice;
+            font-family: 'Courier New', Courier, monospace;
+            font-family: Arial, Helvetica, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
+        }   
+    ```
+>[Google fonts](https://fonts.google.com/)
+- link
+    - In HTML file
+    ```html 
+        <head>
+        ...
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital@1&display=swap" rel="stylesheet">
+        </head>
+    ```
+    ```css
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    ```
+    - In CSS file only
+    ```css
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital@1&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    ```
 
 
 
