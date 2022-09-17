@@ -2,11 +2,11 @@ body {
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    background: papayawhip;
+    background: #ffefd5;
     color: rgba(0, 0, 0,1);
 
 }
 
 p {
-    color: #333
+    color: #333333
 }
