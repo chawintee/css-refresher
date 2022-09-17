@@ -214,5 +214,103 @@ p {
 
 - font-size - use `rem`
 - padding or margin - use `em`
+- `em` relate font-size
 ---
 ## Lesson 5 : Box Model
+- inspect 
+    - orange - margin 
+    - green - padding
+    - blue -content
+- box-sizing
+    - content-box
+    - border-box
+- margin
+    - Long hand
+        ```css
+        .container {
+            margin-top: 1.5em;
+            margin-right: 2em;
+            margin-bottom: 2em;
+            margin-left: 2em;
+        }
+        ```
+    - Short hand
+        ```css
+        .container {
+            margin: top rightandleft bottom ;
+            margin: topandbottom rightandleft ;
+            margin: top right bottom left ;
+        }
+        ```
+    - left and right
+        ```css
+        .container {
+            margin: 3rem auto;
+        }
+        ```
+- padding
+    - Long hand
+        ```css
+        .container {
+            padding-top: 1.5em;
+            padding-right: 2em;
+            padding-bottom: 2em;
+            padding-left: 2em;
+        }
+        ```
+    - Short hand
+        ```css
+        .container {
+            padding: top rightandleft bottom ;
+            padding: topandbottom rightandleft ;
+            padding: top right bottom left ;
+        }
+        ```
+- border 
+    - border
+        ```css
+        .container {
+            border: 2px dashed red;
+        }
+        ```
+    - Long hand
+        ```css
+        .container {
+            border-top-width: 5px;
+            border-top-style: dotted;
+            border-top-color: blue;
+        }
+        ```
+    - Short hand
+        ```css
+        .container {
+            border-top: 5px solid green;
+        }
+        ```
+- outline
+    - outline
+        ```css
+        .container {
+             outline: 5px solid purple;
+            outline-offset: 5px;
+        }
+        ```
+- circle
+    ```css
+        .container {
+            margin: 3rem auto;
+            background-color: gold;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 50px;
+            outline: 2px solid red;
+            outline-offset: 0.25rem;
+        }
+    ```
+---
+## Lesson 6 : Typography
+
+
+
+
