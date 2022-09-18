@@ -490,4 +490,126 @@ p {
     ```
 ---
 ## Lesson 8 : List Styles
+- List style type
+    ```css
+        ol {    
+            list-style-type: lower-alpha ;
+            list-style-type: georgian;
+            list-style-type: decimal;
+            list-style-type: decimal-leading-zero;
+            list-style-type: disc;
+            list-style-type: circle;
+            list-style-type: upper-roman;
+            list-style-type: none;
+            list-style-type: square;
+        }
+    ```
+    - default is decimal.
+    - custom start
+        ```html
+        <ol start="3">
+            <li>Step One</li>
+            <li>Step Two</li>
+            <li>Step Three</li>
+        </ol>
+        ```
+    - count down 
+        ```html
+        <ol reversed>
+            <li>Step One</li>
+            <li>Step Two</li>
+            <li>Step Three</li>
+        </ol>
+        ```
+- Text align
+    ```css
+        ul {
+            text-align: center;
+        }
+    ```
+- List style position
+    ```css
+        ul {
+            list-style-position: inside;
+        }
+    ```
+    - default chrome is outside
+- List style images
+    ```css
+        ul {
+            list-style-image: url('../images/checkmark.png');
+        }
+    ```
+- List style shorthand
+    ```css
+        ul {
+            list-style: square url('../images/checkmark.png') inside;
+        }
+    ```
+    - `list-style: list-style-type list-style-image list-style-position;`
+- change list
+    - change all list
+        ```css
+            ul li:nth-child(even) {
+                color: red;
+            }
+        ```
+    - change list in unorder list
+        ```css
+            ul li:nth-child(even) {
+                color: red;
+            }
+        ```
+    - change list in unorder list in child `2`
+        ```css
+            ul li:nth-child(2) {
+                color: red;
+            }
+        ```
+    - change list in unorder list in child `odd`
+        ```css
+            ul li:nth-child(odd) {
+                color: red;
+            }
+        ```
+    - change list in unorder list in child `even`
+        ```css
+            ul li:nth-child(even) {
+                color: red;
+            }
+        ```
+- psudo class marker
+    - `::marker`
+    - change all marker
+        ```css
+            ::marker {
+                color: red;
+                font-family: fantasy;
+                font-size: 1em;
+                content: "only $5 >>";
+            }
+        ```
+    - change marker in unorder list
+        ```css
+            ul ::marker {
+                color: red;
+                font-family: fantasy;
+                font-size: 1em;
+                content: "only $5 >>";
+            }
+        ```
+- content 
+    - change content of bullet
+        ```css
+            ul ::marker {
+                content: "only $5 >>";
+            }
+        ```
+- change value of list
+    - In HTML File
+        ```html 
+            <li value="26">Step Two</li>
+        ```
+---
+## Lesson 9 : Mini Project
 
