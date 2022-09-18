@@ -704,3 +704,92 @@ p {
             box-sizing: border-box;
         }
     ```
+---
+## Lesson 11 : Float
+index.html
+```html
+    <body>
+        <section>
+            <div class="block left">Float</div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet natus repudiandae itaque? Aliquam accusamus autem corporis ad sint, eum, eveniet, omnis velit ipsum temporibus ex quisquam iure aspernatur debitis quam!</p>
+        </section>
+        <div class="clear"></div>
+        <p>Nam, autem doloremque, rerum perspiciatis cumque voluptatem, nisi ex quibusdam atque quos itaque sed quasi vitae dignissimos. Perspiciatis aspernatur, dolorum natus mollitia voluptatibus vitae adipisci quia porro id vel voluptate.</p>
+        <p>Optio accusamus perferendis blanditiis laborum perspiciatis provident similique commodi nostrum totam cumque sunt error earum, doloribus architecto illum voluptatem ea! Ipsam aut impedit provident sed delectus quis dignissimos est dolores!</p>
+        <div class="block right">Float</div>
+        <p>Ab, laborum mollitia incidunt sit dolore maxime at repudiandae ut dolorum dicta cum? Tempora aperiam numquam ut adipisci ducimus totam placeat quod, amet odio possimus ex repellendus, rem vitae animi!</p>
+        <p>Obcaecati quia nisi ut hic delectus sit odit, eum tempore ipsum unde neque eos incidunt numquam facilis distinctio rerum quasi. Optio illo incidunt aspernatur dolores unde reiciendis quis, beatae sit.</p>
+        </section>
+    </body>
+```
+/css/style.css
+```css
+    @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+    body {
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    }
+
+    .block {
+        width: 30vw;
+        height: 30vw;
+        background-color: #000;
+        color: #fff;
+        padding: 1rem;
+
+    }
+
+    .left {
+        float: left;
+        margin-right: 1rem;
+    }
+
+    .right {
+        float: right;
+        margin-left: 1rem;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    section {
+        background-color: bisque;
+        border: 1px solid #333;
+        padding: 1rem;
+        display: flow-root;
+    }
+```
+- Float
+    - float 
+        - left
+        - right
+- Clear
+    - clear
+        - left
+        - right
+        - both
+    - clear paragraph
+- Overflow
+    - section contain all float
+    ```css
+        section {
+            background-color: bisque;
+            border: 1px solid #333;
+            padding: 1rem;
+            overflow: auto;
+        }
+    ```
+- display : flow-root
+    - section contain all float
+    ```css
+        section {
+            background-color: bisque;
+            border: 1px solid #333;
+            padding: 1rem;
+            display: flow-root;
+        }
+    ```
+    ---
+## Lesson 11 : Columns
