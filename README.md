@@ -418,7 +418,76 @@ p {
             font-family: 'Roboto', sans-serif;
         }
     ```
-
-
-
+---
+## Lesson 7 : Styling Links
+- link (a tag (archor tag))
+- Text decouration 
+    ```css
+       a {
+            text-decoration: underline;
+            text-decoration: none;
+        }
+    ```
+- Cursor
+    ```css
+       a {
+            cursor: not-allowed;
+            cursor: pointer;
+        }
+    ```
+- Color
+    ```css
+       a {
+                color: blue;
+        }
+    ```
+    - default is blue
+- Psudo class
+    - visited
+        ```css
+        a:visited {
+            color: black;
+        }
+        ```
+    - hover
+        ```css
+        a:hover {
+            color: dodgerblue;
+        }
+        ```
+    - active
+        ```css
+        a:active {
+            color: red;
+        }
+        ```
+    - focus 
+        ```css
+        a:focus {
+            color: lightsalmon;
+        }
+        ```
+    - same style hover and focus
+        ```css
+        a:hover,a:focus  {
+            color: dodgerblue;
+        }
+        ```
+- Opacity
+    - opacity
+        ```css
+        a:hover,a:focus  {
+            opacity: 0.8;
+        }
+        ```
+    - opacity max is 1 
+    - opacity min is 0 is transparent
+- background
+    ```css
+        a:hover,a:focus  {
+            background-color: gold;
+        }
+    ```
+---
+## Lesson 8 : List Styles
 
