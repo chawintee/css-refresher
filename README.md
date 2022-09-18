@@ -792,4 +792,84 @@ index.html
         }
     ```
     ---
-## Lesson 11 : Columns
+## Lesson 12 : Columns
+- column
+    - column-count 
+        index.html
+        ```html
+        <body>
+            <section class="columns">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque aut tempore aspernatur ex, dignissimos mollitia voluptate quaerat adipisci quibusdam libero architecto reiciendis aperiam doloribus aliquam, nesciunt impedit ducimus. Nam, illo?</p>
+                <p>Maiores non inventore, quibusdam sunt aperiam atque, fugit exercitationem aut ipsa, dolorum iusto nihil quod? Beatae quis, ab doloribus architecto labore harum, incidunt iusto doloremque rem, autem dignissimos eveniet earum.</p>
+                <p>Repudiandae consectetur nemo, magni sit, sequi repellendus delectus nisi dicta molestias ipsa illum laborum fuga blanditiis inventore assumenda minus, aspernatur tenetur. Quas ex nam quaerat! Iste voluptatibus provident at? Explicabo.</p>
+                <p>Error neque accusantium commodi, nobis ea illum recusandae explicabo, a fuga veritatis deleniti, tempore eligendi totam consectetur reprehenderit repellendus ipsa ipsum dignissimos ab hic quia rerum cumque. Placeat, libero saepe!</p>
+            </section>
+                <p>Nesciunt earum voluptas hic officia fugiat esse nihil molestiae! Nostrum dolores laudantium minus ex inventore aperiam numquam ab debitis saepe quam labore voluptatem, iure quae quo tempora veniam ea voluptas!</p>
+        </body>
+        ```
+        css/style.css
+        ```css
+        .columns {
+            column-count: 4;
+        }
+        ```
+        - split column
+        - number of columns
+    - column-width
+        ```css
+            .columns {
+            column-width: 250px;
+            }
+        ```
+        - width of each columns
+    - column shorthand
+        ```css
+            .columns {
+            columns: 4 250px;
+            }
+        ```
+    - column-rule
+        ```css
+            .columns {
+            column-rule: 3px solid #333;
+            }
+        ```
+        - line partition of each columns
+    - column-gap
+        ```css
+            .columns {
+            column-gap: 3rem;
+            }
+        ```
+        - gap of each collumns
+- break-inside
+    ```css
+        .columns h2 {
+        break-inside: avoid;
+        }
+    ```
+        - break in new column
+- break-before
+    ```css
+        .columns h2 {
+        break-before: column;
+        }
+    ```
+    - initiate in new column in top
+    - please avoid
+> [unicode-table](https://unicode-table.com/)
+- column-span
+    ```css
+        .quote {
+        column-span: all;
+        }
+    ```
+    - like merge
+- white-space
+    ```css
+        .nowrap {
+        white-space: nowrap;
+        }
+    ```
+---
+## Lesson 13 : Position
