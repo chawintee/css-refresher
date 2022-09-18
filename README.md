@@ -104,6 +104,13 @@ CSS Validator
                 font-family: monospace;
             }
         ```
+    >seperate selector
+        ```css
+            li a {
+                display: block;
+            }
+        ```
+        - select anchor tag`<a></a>` inside list`<li></li>`
 > css work
 - CSS work like waterfloor  Top Down
 - css apply by TOP DOWN
@@ -612,4 +619,88 @@ p {
         ```
 ---
 ## Lesson 9 : Mini Project
-
+- border-radius 
+    ```css
+        h2 {
+            padding: 1rem;
+            background: gold;
+            border-radius: 2rem 2rem 0 0;
+        }
+    ```
+    - border-radius: topleft topright bottomright bottomleft;
+- border-top
+    ```css
+        li {
+            border-top: 1px solid #333;
+        }
+    ```
+- other
+    ```css
+        li a,
+        li a:visited {
+            text-decoration: none;
+            color: #333;
+        }
+    ```
+    ```css
+        li a:hover, 
+        li a:focus {
+            background: #333;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+    ```
+- display
+    ```css
+        li a {
+            display: block;
+        }
+    ```
+    - a tag is inline display
+    - block display is 100% width
+        - inline display 
+        - block display
+- psudo select 
+    - last-child
+        ```css
+            li:last-child a {
+                border-radius: 0 0 2rem 2rem;
+            }
+        ```
+---
+## Lesson 10 : Display
+- block
+    - html is block element
+    - 100% width
+    - block can stack of top each other.
+- inline
+    - `span` is default display `inline`
+    - inline do not stack of top each other.
+    - only width of the content
+- inline-block
+    - hyblid
+    - inline and can top and bottom, hight  
+    ```css
+        .opposite {
+            display: inline-block;
+            background-color: #333;
+            color: whitesmoke;
+            padding: 4rem;
+            margin-top: 100px;
+            height: 200px;
+        }
+    ```
+    ```css
+        li {
+            display: inline-block;
+            margin-inline: 0.5rem;
+        }
+    ```
+- use every element 
+    ```css
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    ```
