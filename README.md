@@ -1035,3 +1035,231 @@ body {
             scroll-behavior: smooth;
         }
     ```
+---
+## Lesson 14 : Flexbox
+- div are block element
+- display
+    - flex : is horizontal line
+- justify-content
+    - all flex item in container goto the justify set
+    - justify in horizontal line.
+    ```css
+        .container {
+            max-width: 800px;
+            min-height: 400px;
+            margin-inline: auto;
+            border: 1px solid #000;
+            display: flex;
+            //example
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-around;
+            justify-content: space-between;
+            justify-content: space-evenly;
+        } 
+    ```
+- gap 
+    - gap between this flex Item
+    ```css
+        .container {
+            //example
+            gap: 1rem;
+        } 
+    ```
+- align-item
+    - set each flex item in vertical line
+    ```css
+        .container {
+            max-width: 800px;
+            min-height: 400px;
+            margin-inline: auto;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-evenly;
+            //
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+        } 
+    ```
+- flex-direction
+    - set all flex item direction is column or row
+    - switch justify-content and align-item when flex-direction is column.
+    ```css
+        .container {
+            max-width: 800px;
+            min-height: 400px;
+            margin-inline: auto;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            //
+            flex-direction: column;
+            flex-direction: row;
+            flex-direction: row-reverse;
+        } 
+    ```
+- flex-wrap
+    - flex box row It's really not changing, It out growing, It's not resizing. or strenging to stay inside of the container or the page that It consider in overflow.
+    ```css
+        .container {
+            max-width: 800px;
+            min-height: 400px;
+            margin-inline: auto;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            flex-direction: row;
+            //
+            flex-wrap: wrap;
+        } 
+    ```
+- flex-flow
+    - It's a short hand of flex-direction and flex-wrap.
+    - `flex-flow: flex-direction flex-wrap`
+    - `flex-flow: row wrap`
+    ```css
+        .container {
+            max-width: 800px;
+            min-height: 400px;
+            margin-inline: auto;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            //
+            flex-flow: row wrap;
+        } 
+    ```
+- align-content
+    - all flex item in container goto the align set
+    - align in verticle line.
+    ```css
+        .container {
+            max-width: 800px;
+            min-height: 400px;
+            margin-inline: auto;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            flex-flow: row wrap;
+            //
+            align-content: flex-start;
+            align-content: center;
+            align-content: space-between;
+            align-content: space-around;
+            align-content: space-evenly;
+        }
+    ```
+- flex-basic
+    -like width of each flex
+    - size basis of flex
+    ```css
+        .box {
+            /* min-width: 100px; */
+            height: 100px;
+            background-color: #000;
+            color: #fff;
+            font-size: 2rem;
+            padding: 0.5rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-basis: 100px;
+        }
+    ```
+- flex-grow
+    - flex-grow is filling out a page.
+    - grow of the container
+    - flex grow when display grow(expand)_
+    ```css
+        .box {
+            /* min-width: 100px; */
+            height: 100px;
+            background-color: #000;
+            color: #fff;
+            font-size: 2rem;
+            padding: 0.5rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-basis: 100px;
+            flex-grow: 1;
+        }
+
+        .box:nth-child(2){
+            flex-grow: 2;
+        }
+    ```
+- flex-shrink
+    - flex is shrink(small(width)) when display(width) is reduce
+    ```css
+        .box {
+        /* min-width: 100px; */
+        height: 100px;
+        background-color: #000;
+        color: #fff;
+        font-size: 2rem;
+        padding: 0.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-basis: 250px;
+        flex-shrink: 1;
+        }
+
+        .box:nth-child(2){
+            flex-shrink: 2;
+        }
+    ```
+- flex
+    - flex is shorthand of flex-grow flex-shrink and flex-basis
+    - `flex: flex-grow flex-shrink flex-basis`
+    ```css
+        .box {
+            /* min-width: 100px; */
+            height: 100px;
+            background-color: #000;
+            color: #fff;
+            font-size: 2rem;
+            padding: 0.5rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex: 1 1 150px;
+        }
+
+        .box:nth-child(2){
+            flex: 2 2 150px;
+        }
+    ```
+- order
+    - move order of chind
+    - The first position of item is order 0
+    - right is + left is -
+    ```css
+        .box:nth-child(2){
+            flex: 2 2 150px;
+            order: 1;
+        }
+    ```
+
+> Learn flexbox
+ - [Flexbox Froggy](https://flexboxfroggy.com/)
+ ---
+## Lesson 15 : Grid Layout
