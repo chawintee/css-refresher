@@ -873,3 +873,165 @@ index.html
     ```
 ---
 ## Lesson 13 : Position
+index.html
+```html
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="box absolute">
+                <p>Absolute</p>
+            </div>
+            <div class="box relative">
+                <p>Relative</p>
+            </div>
+            <div class="box fixed">
+                <p>Fixed</p>
+            </div>
+            <div class="box sticky">
+                <p>Sticky</p>
+            </div>
+        </div>
+    </div>
+</body>
+```
+style.css
+```css
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  min-height: 200vh;
+}
+
+.outer-container {
+  border: 3px dashed #000;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  position: relative;
+}
+
+.inner-container {
+  border: 2px solid #00f;
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  padding: 1rem;
+}       
+
+.absolute {
+  background-color: #00f;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.relative {
+  background-color: #f00;
+  position: relative;
+  top: 300px;
+  left: 100px;
+}
+
+.fixed {
+  background-color: #0f0;
+  position: fixed;
+  top: 100px;
+}
+
+.sticky {
+  background-color: #000;
+  position: sticky;
+}
+```
+- absolute
+    - absolute with parent of position relative.
+    - absolute with parent of position relative ancestor in closet to . the nearest one.
+    index.html
+    - absolute to parent container that position relative nearest.
+    ```html
+        <div class="box absolute">
+            <p>Absolute</p>
+        </div>
+    ```
+    ```css
+        .absolute {
+            background-color: blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }       
+    ```
+- relative
+    - relative with parent.
+    - relative to parent container.
+    ```html
+        <div class="box relative">
+            <p>Relative</p>
+        </div>
+    ```
+    ```css
+        .relative {
+            background-color: #f00;
+            position: relative;
+            top: 300px;
+            left: 100px;
+        }
+    ```
+- fix
+    - fix of screen 
+    - fix of screen move with mouse scroll .
+    - fix position in eternel time. not moving when scroll the page.
+    ```html
+        <div class="box fixed">
+            <p>Fixed</p>
+        </div>
+    ```
+    ```css
+        .fixed {
+            background-color: #0f0;
+            position: fixed;
+            top: 100px;
+        }
+    ```
+- sticky
+    - move a little when scroll mouse.
+    - stic at the top and then It move again when the container catch it up to it. 
+    ```html
+         <div class="box sticky">
+            <p>Sticky</p>
+        </div>
+    ```
+    ```css
+        .sticky {
+            background-color: #000;
+            position: sticky;
+        }
+    ```
+
+    >- z-index 
+    ```css
+        .class {
+            z-index: 1; 
+        }
+    ```
+    - `z-index: 1` bring to top
+    - default is 0.
+    > scroll-behavior
+    ```css
+        html {
+            scroll-behavior: smooth;
+        }
+    ```
