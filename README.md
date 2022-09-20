@@ -1263,3 +1263,228 @@ body {
  - [Flexbox Froggy](https://flexboxfroggy.com/)
  ---
 ## Lesson 15 : Grid Layout
+```html 
+    <body>
+        <main class="container">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+        </main>
+    </body>
+``` 
+```css
+
+```
+- `display: grid;`
+    - `display: grid;`
+    ```css
+       .container {
+            display: grid;
+        }
+    ```
+- grid-auto-flow
+    - how to grid element flow
+    ```css
+       .container {
+            display: grid;
+            grid-auto-flow: row;
+            grid-auto-flow: column;
+        }
+    ```
+- grid-template-columns
+    - template of grid show in column
+    ```css
+       .container {
+            grid-template-columns: 200px 100px 200px;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 200px 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr 2fr);
+        }
+    ```
+    - `grid-template-columns: sizeOfColumn1 sizeOfColumn2 sizeOfColumn3 sizeOfColumn(n)` ;
+        - `grid-template-columns: 200px 1fr 1fr;`
+        - absolute size 
+            - px
+        - relative size
+            - fr (fraction)
+    - `grid-template-columns: repeat(n, sizeOfColumn1 sizeOfColumn2 sizeOfColumn2);`
+        - `grid-template-columns: repeat(2, 1fr 2fr);`
+        - n = numberOfYouWouldLikeToRepeate
+- grid-auto-rows
+    ```css
+       .container {
+            grid-auto-rows: 200px;
+            grid-auto-rows: minmax(150px, auto);
+        }
+    ```
+    - tall of each grid (height of each grid)
+    - `grid-auto-rows: 200px;`
+    - `grid-auto-rows: minmax(min, max);`
+        - `grid-auto-rows: minmax(150px, auto);`
+        - min - minimum of each grid don't less than 150px more than OK.
+        - max -maximum of each grid .
+- row-gap
+    - `row-gap: 1em;`
+    - gap of grid in row
+    ```css
+        .container {
+            row-gap: 1em;
+        }  
+    ```
+- column-gap
+    - `column-gap: 1em;`
+    - gap of grid in column
+    ```css
+        .container {
+            column-gap: 1em;
+        }  
+    ```
+- gap
+    - gap combine with row and column
+    ```css
+        .container {
+            gap: 1rem ;
+            gap: 1rem 2rem;
+        }  
+    ```
+    - `gap: rowgap columngap`
+- grid-...-start , grid-...-end
+    ```css
+        .box:first-child {
+            background-color: #00f;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+    ```
+- grid-column-start
+    - first line in on the left hand of the grid.
+- grid-column-end
+    - -
+    - grid span in grid-column-start and end in grid-column-end
+- grid-row-start
+- grid-row-end
+- short hand of grid-...
+    ```css
+        .box:first-child {
+            background-color: #00f;
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+        }
+    ```
+    - `grid-column: start / end`
+    - `grid-row: start / end`
+- check number of grid
+    - open dev tool (F12)
+    - Element
+    - Layout
+    - Grid overlays
+    - main.container
+    - show line and lable of grid
+- align-content 
+    - vertical
+- justify-content
+    - horizontal
+    ```css
+        .box:first-child {
+            background-color: #00f;
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+            
+            display: grid;
+            align-content: center;
+            justify-content: end;
+        }
+    ```
+- place-content
+    - combine align-content and justify-content
+    ```css
+        .box:first-child {
+            background-color: #00f;
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+            
+            display: grid;
+            place-content: end start;
+        }
+    ```
+    - `place-content: align-content justify-content;`
+    ```css
+        .box:first-child {
+            background-color: #00f;
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+            
+            display: grid;
+            place-content: center;
+        }
+    ```
+    - `place-content: align-contentAndjustify-content;`
+- grid-template-areas
+    - index.html
+    ```html
+        <body>
+            <header class="header el"><h1>Header</h1></header>
+            <main class="container">
+                    <div class="box">1</div>
+                    <div class="box">2</div>
+                    <div class="box">3</div>
+                    <div class="box">4</div>
+                    <div class="box">5</div>
+                    <div class="box">6</div>
+                </main>
+            <aside class="sidebar el"><h2>Sidebar</h2></aside>
+            <footer class="footer el"><h2>Footer</h2></footer>
+        </body>
+    ```
+    /css/style.css
+    ```css
+        body {
+            font-family: "Roboto", sans-serif;
+            min-height: 100vh;
+
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-auto-rows: 50px auto 50px;
+            grid-template-areas: 
+            "hd hd hd hd hd hd hd hd hd"
+            "mn mn mn mn mn mn mn sb sb"
+            "ft ft ft ft ft ft ft ft ft" ;
+            column-gap: 0.5rem;
+        }
+
+        .el {
+            background-color: rebeccapurple;
+            color: #fff;
+            display: grid;
+            place-content: center;
+        }
+
+        .header {
+            grid-area: hd;
+        }
+
+        .sidebar {
+            grid-area: sb;
+            background-color: #00f;
+        }
+
+        .footer {
+            grid-area: ft;
+        }
+
+        .container {
+            grid-area: mn;
+            min-height: 400px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr 2fr);
+            grid-auto-rows: minmax(150px, auto);
+            gap: 0.5rem;
+        }
+    ```
+> game to more understand grid
+- [GRID GARDEN](https://cssgridgarden.com/)
