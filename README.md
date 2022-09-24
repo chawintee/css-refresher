@@ -1626,3 +1626,63 @@ body {
     - `background-size: cover; /* full image in cotainer */`
     - `align-items: center;`
     - `gap: 30px;`
+
+
+>example 3
+- index.html
+    ```html
+        <body>
+            <section>
+                <p class="clip">
+                    Jane
+                </p>
+            </section>
+        </body>
+    ```
+- css/style.css
+    ```css
+        body {
+            font-family: "Nunito", sans-serif;
+            min-height: 100vh;
+            background-color: aliceblue;
+            background-image: linear-gradient(steelblue, #fff );
+            background-image: linear-gradient(steelblue, purple, #fff );
+            background-image: linear-gradient(to left, steelblue, #fff );
+            background-image: linear-gradient(to right, steelblue, #fff );
+            background-image: linear-gradient(to bottom, steelblue, #fff );
+            background-image: linear-gradient(to top, steelblue, #fff );
+            background-image: linear-gradient(to left, steelblue, #fff );
+
+            /* first one, second one, n one */
+            background-image: url('../img/bubbles.png'),
+                                linear-gradient(to left, steelblue, #fff );
+            background-repeat: repeat-y, no-repeat;
+            background-position: right center;
+            background-size: 20%, auto;
+
+            /* background shorthand */
+            background: repeat-y right center url(../img/bubbles.png), no-repeat linear-gradient(to left, steelblue, #fff);
+                /* background: repeat position url */
+        }
+
+        .clip {
+            font-weight: 800;
+            font-size: 18rem;
+            text-align: center;
+            background-image: url("../img/scenic-2200x1331.png");
+            background-size: 100%;
+            text-transform: uppercase;
+            -webkit-background-clip: text; /* for chrome */
+            background-clip: text; /* for firefox */
+            color: hsl(0, 0%, 0%, 0.196);
+            color: transparent;
+        }
+    ```
+    - `background-image: linear-gradient(to left, steelblue, #fff );`
+    - `background: repeat-y right center url(../img/bubbles.png), no-repeat linear-gradient(to left, steelblue, #fff);`
+    - `background: repeat position url`
+    - `-webkit-background-clip: text; /* for chrome */`
+    - `background-clip: text; /* for firefox */`
+    - `text-transform: uppercase;`
+    ---
+## Lesson 17 : Media Queries
