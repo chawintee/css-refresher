@@ -1686,3 +1686,171 @@ body {
     - `text-transform: uppercase;`
     ---
 ## Lesson 17 : Media Queries
+- key of responsive design for our webpage.
+- font short hand
+    - `font: fontSize fontFamily`
+- `<meta name="viewport" content="width=device-width, initial-scale=1.0">` 
+    - This in head allow to responsive design.
+    - vs code ! and Tab for create html skeleton.
+> Syntax of media queries
+- /css/style.css
+    ```css
+        /* Syntax: */
+        @media media type and (condition: breakpoint) {
+            /*CSS rules */
+        }
+    ```
+- Type of condition and breakpoint
+    ```css
+        /* Syntax: */
+        @media screen and (min-width: 481px) {
+            /* CSS rules */
+
+        } 
+
+        @media screen and (orientation: landscape) {
+            /* CSS rules */
+            
+        } 
+
+        @media screen and (min-aspect-ratio: 16/9) {
+            /* CSS rules */
+            
+        } 
+
+        @media screen and (min-aspect-ratio: 7/4) {
+            /* CSS rules */
+            
+        } 
+    ```
+> example 
+- index.html
+    ```html
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CSS Media Queries</title>
+            <link rel="stylesheet" href="css/style.css">
+        </head>
+
+        <body>
+            <header>
+                <h1>Header</h1>
+                <nav><h2>Nav</h2></nav>
+            </header>
+
+            <main>
+                <h2>Main</h2>
+            </main>
+
+            <footer>
+                <h2>Footer</h2>
+            </footer>
+        </body>
+    ```
+- css/style.css
+    ```css
+    /* || RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* || GENERAL STYLES */
+    body {
+        font: 1.5rem "Nunito", sans-serif;
+        min-height: 100vh;
+
+        background-color: #475569;
+        background-image: radial-gradient(whitesmoke, #475569);
+        display: flex;
+        flex-direction: column;
+    }
+
+    header, nav, main, footer {
+            display: grid;
+            place-content: center;
+            grid-template-columns: 100%;
+            text-align: center;
+    }
+
+    header, footer {
+            position: sticky;
+            background-color: #1E293B;
+            color: whitesmoke;
+    }
+
+    header {
+        top: 0;
+    }
+
+    nav {
+        background-color: #fff;
+        color: #000;
+        padding: 0.5rem;
+        border-bottom: 2px solid #000;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+
+    footer {
+        bottom: 0;
+    }
+
+    /* || SMALL */
+    @media screen and (min-width: 576px) {
+        body {
+            background-color: green;
+            background-image: radial-gradient(whitesmoke, green);
+        }
+        nav {
+            display: none;
+        }
+        
+    }
+
+    /* || MEDIUM */
+    @media screen and (min-width: 768px) {
+        body {
+            background-color: gold;
+            background-image: radial-gradient(whitesmoke, gold);
+        }
+    }
+
+    /* || LARGE */
+    @media screen and (min-width: 992px) {
+        body {
+            background-color: firebrick;
+            background-image: radial-gradient(whitesmoke, firebrick);
+        }
+    }
+
+    /* || XL */
+    @media screen and (min-width: 1200px) {
+        body {
+            background-color: rebeccapurple;
+            background-image: radial-gradient(whitesmoke, rebeccapurple);
+        }
+    }
+
+    /* || MOBILE DEVICE LANDSCAPE */
+    @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+        body {
+            background-color: dodgerblue;
+            background-image: radial-gradient(whitesmoke, dodgerblue);
+        }
+
+        nav {
+            display: none;
+        }
+        
+        h1, h2 {
+            font-size: 1.5rem;
+        }
+    }
+    ```
+---
